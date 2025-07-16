@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Star, Quote, ChevronLeft, ChevronRight, Play, Award, Heart, Users } from 'lucide-react';
+import { Star, Quote, Award, Heart, Users } from 'lucide-react';
 
 const TestimonialsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
 
   const categories = [
     { id: 'all', name: 'All Testimonials' },
@@ -120,32 +119,6 @@ const TestimonialsPage = () => {
     }
   ];
 
-  const videoTestimonials = [
-    {
-      id: 1,
-      name: 'Dr. Sarah Mitchell',
-      role: 'Chief Medical Officer',
-      thumbnail: 'https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-      duration: '2:45',
-      title: 'Transforming Patient Care with AI'
-    },
-    {
-      id: 2,
-      name: 'Maria Rodriguez',
-      role: 'Patient Mother',
-      thumbnail: 'https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-      duration: '1:30',
-      title: 'How MedZen Changed Our Lives'
-    },
-    {
-      id: 3,
-      name: 'Dr. Michael Chen',
-      role: 'Cardiologist',
-      thumbnail: 'https://images.pexels.com/photos/6129507/pexels-photo-6129507.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-      duration: '3:15',
-      title: 'Advanced Cardiac Diagnostics'
-    }
-  ];
 
   const filteredTestimonials = selectedCategory === 'all' 
     ? testimonials 
@@ -214,66 +187,9 @@ const TestimonialsPage = () => {
         </div>
       </section>
 
-      {/* Video Testimonials */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-              Video Testimonials
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Watch real stories from healthcare professionals and patients sharing their experiences with MedZen.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {videoTestimonials.map((video, index) => (
-              <motion.div
-                key={video.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                viewport={{ once: true }}
-                className="relative group cursor-pointer"
-              >
-                <div className="relative overflow-hidden rounded-xl">
-                  <img
-                    src={video.thumbnail}
-                    alt={video.title}
-                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-300" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <Play className="h-8 w-8 text-emerald-600 ml-1" />
-                    </div>
-                  </div>
-                  <div className="absolute bottom-4 right-4 bg-black/70 text-white px-2 py-1 rounded text-sm">
-                    {video.duration}
-                  </div>
-                </div>
-                <div className="mt-4">
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                    {video.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm">
-                    {video.name} - {video.role}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Category Filter */}
-      <section className="py-20 bg-white dark:bg-gray-900">
+      <section className="py-20 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -390,6 +306,33 @@ const TestimonialsPage = () => {
       </section>
 
       {/* CTA Section */}
+      <section className="py-20 bg-white dark:bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
+              Join Our Growing Community
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+              Become part of the healthcare revolution. Experience the difference MedZen can make for your patients and practice.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200">
+                Share Your Story
+              </button>
+              <button className="border-2 border-emerald-600 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200">
+                Get Started Today
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Final CTA Section */}
       <section className="py-20 bg-gradient-to-r from-emerald-600 to-blue-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
@@ -399,17 +342,17 @@ const TestimonialsPage = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Join Our Growing Community
+              Ready to Transform Healthcare?
             </h2>
             <p className="text-xl text-emerald-100 mb-8 max-w-2xl mx-auto">
-              Become part of the healthcare revolution. Experience the difference MedZen can make for your patients and practice.
+              Join thousands of healthcare professionals who trust MedZen for innovative medical solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-emerald-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors duration-200">
-                Share Your Story
+                Contact Us
               </button>
               <button className="border-2 border-white text-white hover:bg-white hover:text-emerald-600 px-8 py-3 rounded-lg font-semibold transition-colors duration-200">
-                Get Started Today
+                Learn More
               </button>
             </div>
           </motion.div>

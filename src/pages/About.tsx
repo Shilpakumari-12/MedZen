@@ -36,32 +36,6 @@ const About = () => {
     }
   ];
 
-  const team = [
-    {
-      name: 'Dr. Sarah Mitchell',
-      role: 'Chief Medical Officer',
-      image: 'https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop',
-      bio: 'Leading cardiologist with 20+ years of experience in advanced medical technologies and patient care.'
-    },
-    {
-      name: 'Dr. Michael Chen',
-      role: 'Director of Innovation',
-      image: 'https://images.pexels.com/photos/6129507/pexels-photo-6129507.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop',
-      bio: 'Pioneering medical technology specialist focused on developing next-generation healthcare solutions.'
-    },
-    {
-      name: 'Dr. Emily Rodriguez',
-      role: 'Head of Patient Care',
-      image: 'https://images.pexels.com/photos/5327656/pexels-photo-5327656.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop',
-      bio: 'Experienced pediatrician dedicated to improving patient experiences and healthcare accessibility.'
-    },
-    {
-      name: 'Dr. James Wilson',
-      role: 'Chief Technology Officer',
-      image: 'https://images.pexels.com/photos/6129020/pexels-photo-6129020.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop',
-      bio: 'Technology visionary with expertise in AI-driven medical diagnostics and digital health platforms.'
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 pt-20">
@@ -170,54 +144,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team */}
-      <section className="py-20 bg-white dark:bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">Our Team</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Meet the medical experts and innovators who are transforming healthcare with MedZen.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-              <motion.div
-                key={member.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="relative mb-6">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-40 h-40 rounded-full mx-auto object-cover shadow-xl border-4 border-white dark:border-gray-700"
-                  />
-                  <div className="absolute inset-0 w-40 h-40 rounded-full mx-auto bg-gradient-to-br from-emerald-400 to-blue-400 opacity-10" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                  {member.name}
-                </h3>
-                <p className="text-emerald-600 dark:text-emerald-400 font-medium mb-4">
-                  {member.role}
-                </p>
-                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-                  {member.bio}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
