@@ -71,7 +71,7 @@ const CaseReport = () => {
               <Heart className="h-16 w-16 text-primary-600 dark:text-secondary-400" />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              Case Report Writing
+              🩺 Case Report Writing
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               Simple, Structured, Supportive
@@ -83,21 +83,6 @@ const CaseReport = () => {
       {/* Process Section */}
       <section className="py-20 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              How We Work
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Our streamlined process ensures your case report meets the highest academic standards
-            </p>
-          </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {processSteps.map((step, index) => (
               <motion.div
@@ -123,7 +108,7 @@ const CaseReport = () => {
         </div>
       </section>
 
-      {/* Requirements Section */}
+      {/* After Draft Section */}
       <section className="py-20 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -134,42 +119,7 @@ const CaseReport = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              What We Need to Begin
-            </h2>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {requirements.map((requirement, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-600 text-center"
-              >
-                <div className="flex items-center justify-center w-12 h-12 bg-primary-100 dark:bg-secondary-900/20 rounded-full mx-auto mb-4">
-                  <CheckCircle className="h-6 w-6 text-primary-600 dark:text-secondary-400" />
-                </div>
-                <p className="text-gray-700 dark:text-gray-300 font-medium">{requirement}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* After Draft Section */}
-      <section className="py-20 bg-white dark:bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              After the First Draft
+              📝 After the First Draft
             </h2>
           </motion.div>
 
@@ -181,13 +131,13 @@ const CaseReport = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-gray-800 dark:to-gray-700 p-8 rounded-xl border border-gray-200 dark:border-gray-600"
+                className="bg-white dark:bg-gray-700 p-8 rounded-xl border border-gray-200 dark:border-gray-600"
               >
                 <div className="flex items-center justify-center w-16 h-16 bg-primary-100 dark:bg-secondary-900/20 rounded-xl mb-6">
                   <step.icon className="h-8 w-8 text-primary-600 dark:text-secondary-400" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
-                  {step.title}
+                  ✅ {step.title}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
                   {step.description}
@@ -199,7 +149,7 @@ const CaseReport = () => {
       </section>
 
       {/* Promise Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800">
+      <section className="py-20 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -208,27 +158,29 @@ const CaseReport = () => {
             viewport={{ once: true }}
             className="text-center"
           >
-            <div className="bg-white dark:bg-gray-700 p-8 md:p-12 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-600 max-w-4xl mx-auto">
+            <div className="bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-gray-800 dark:to-gray-700 p-8 md:p-12 rounded-2xl border border-gray-200 dark:border-gray-600 max-w-4xl mx-auto">
               <Shield className="h-16 w-16 text-primary-600 dark:text-secondary-400 mx-auto mb-6" />
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-                What We Promise
+                ❗ What We Promise
               </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
-                We promise dedication, not publication.
-              </p>
-              <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
-                While we ensure your case report meets the highest academic standards, final decisions rest with the journal.
-              </p>
-              <p className="text-lg font-semibold text-primary-600 dark:text-secondary-400">
-                That said, we remain by your side—supporting your manuscript through each round of feedback, at no additional cost.
-              </p>
+              <div className="space-y-4 text-lg text-gray-600 dark:text-gray-300">
+                <p className="font-semibold text-primary-600 dark:text-secondary-400">
+                  We promise dedication, not publication.
+                </p>
+                <p>
+                  While we ensure your case report meets the highest academic standards, final decisions rest with the journal.
+                </p>
+                <p>
+                  That said, we remain by your side—supporting your manuscript through each round of feedback, at no additional cost.
+                </p>
+              </div>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 bg-white dark:bg-gray-900">
+      <section className="py-20 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -237,12 +189,9 @@ const CaseReport = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <div className="flex items-center justify-center mb-6">
-              <Award className="h-12 w-12 text-primary-600 dark:text-secondary-400 mr-4" />
-              <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
-                Why Choose MedZen Writes?
-              </h2>
-            </div>
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              💡 Why Choose MedZen Writes?
+            </h2>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -253,7 +202,7 @@ const CaseReport = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-gray-800 dark:to-gray-700 p-6 rounded-xl border border-gray-200 dark:border-gray-600 hover:shadow-lg transition-shadow duration-300"
+                className="bg-white dark:bg-gray-700 p-6 rounded-xl border border-gray-200 dark:border-gray-600"
               >
                 <div className="flex items-start space-x-3">
                   <div className="w-2 h-2 bg-primary-600 rounded-full mt-3 flex-shrink-0" />

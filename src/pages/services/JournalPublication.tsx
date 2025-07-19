@@ -5,9 +5,8 @@ import {
   FileText, 
   CheckCircle, 
   ArrowRight, 
-  Clock, 
-  Award, 
-  Users,
+  Shield,
+  Award,
   Target,
   BookOpen,
   Search,
@@ -15,59 +14,36 @@ import {
 } from 'lucide-react';
 
 const JournalPublication = () => {
-  const features = [
+  const processSteps = [
     {
-      icon: Edit,
-      title: 'Manuscript Writing',
-      description: 'Expert writing of research manuscripts following international guidelines and journal requirements.'
+      step: '01',
+      title: 'You Send the Thesis, We Do the Rest',
+      description: 'Share your completed thesis — we\'ll convert it into a polished, journal-ready manuscript and suggest suitable indexed journals in your field.'
     },
     {
-      icon: Target,
-      title: 'Journal Selection',
-      description: 'Strategic journal selection based on your research scope, impact factor, and target audience.'
+      step: '02',
+      title: 'We Write It Fresh & Original',
+      description: 'Our editors rewrite key sections (especially the Introduction) to meet journal standards, ensuring it\'s 100% human-written and follows the IMRaD format.'
     },
     {
-      icon: FileText,
-      title: 'Submission Support',
-      description: 'Complete submission assistance including formatting, cover letters, and response to reviewers.'
+      step: '03',
+      title: 'Your Data, Clearly Presented',
+      description: 'We review and refine your tables, stats, and graphs for clarity, accuracy, and visual appeal.'
     },
     {
-      icon: Search,
-      title: 'Literature Review',
-      description: 'Comprehensive literature review and citation management for strong theoretical foundation.'
+      step: '04',
+      title: 'We Work With You to Finalize',
+      description: 'You review the draft, suggest edits, and we revise until the manuscript perfectly reflects your research.'
     }
   ];
 
-  const process = [
-    {
-      step: 1,
-      title: 'Initial Consultation',
-      description: 'We discuss your research, target journals, and specific requirements.'
-    },
-    {
-      step: 2,
-      title: 'Manuscript Development',
-      description: 'Our experts craft your manuscript following best practices and journal guidelines.'
-    },
-    {
-      step: 3,
-      title: 'Quality Review',
-      description: 'Multiple rounds of review ensure accuracy, clarity, and adherence to standards.'
-    },
-    {
-      step: 4,
-      title: 'Journal Submission',
-      description: 'We assist with submission and provide ongoing support throughout the review process.'
-    }
-  ];
-
-  const benefits = [
-    'Increased publication success rate',
-    'Faster manuscript preparation',
-    'Expert knowledge of journal requirements',
-    'Professional formatting and presentation',
-    'Ongoing support during peer review',
-    'Confidentiality and data security'
+  const whyChooseUs = [
+    'Department-wise journal recommendations',
+    '100% human-written, AI-free manuscripts',
+    'Data verification & elegant table/graph restructuring',
+    'Unlimited revisions before submission',
+    'End-to-end support through peer review',
+    'Submission assistance to up to 4 journals'
   ];
 
   return (
@@ -83,59 +59,48 @@ const JournalPublication = () => {
           >
             <FileText className="h-16 w-16 text-primary-600 dark:text-secondary-400 mx-auto mb-6" />
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              Journal Publication Services
+              Journal Publication
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Expert manuscript preparation and publication support to maximize your research impact
+              From Thesis to Published Manuscript — How It Works
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Process Section */}
       <section className="py-20 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-              Comprehensive Publication Support
-            </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              From manuscript writing to journal submission, we provide end-to-end support for your publication journey
-            </p>
-          </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
+            {processSteps.map((step, index) => (
               <motion.div
-                key={index}
+                key={step.step}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700"
+                className="bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-gray-800 dark:to-gray-700 p-8 rounded-xl border border-gray-200 dark:border-gray-600"
               >
-                <div className="flex items-center justify-center w-12 h-12 bg-primary-100 dark:bg-secondary-900/20 rounded-lg mb-6">
-                  <feature.icon className="h-6 w-6 text-primary-600 dark:text-secondary-400" />
+                <div className="flex items-start space-x-4">
+                  <div className="bg-primary-600 text-white w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">
+                    {step.step}
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+                      {step.title}
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-300">
+                      {step.description}
+                    </p>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  {feature.description}
-                </p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Process Section */}
+      {/* Promise Section */}
       <section className="py-20 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -143,119 +108,73 @@ const JournalPublication = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            className="text-center"
+          >
+            <div className="bg-white dark:bg-gray-700 p-8 md:p-12 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-600 max-w-4xl mx-auto">
+              <Shield className="h-16 w-16 text-primary-600 dark:text-secondary-400 mx-auto mb-6" />
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+                🛡️ What We Promise – And What We Don't
+              </h2>
+              <div className="space-y-4 text-lg text-gray-600 dark:text-gray-300 text-left">
+                <p>
+                  We believe in transparency and trust. While we cannot guarantee journal acceptance (as it depends on editorial and peer review discretion), we stand by you every step of the way.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0 mt-1" />
+                    <p>If your article is rejected, we continue to support you for up to 4 journal resubmissions—no extra charges.</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0 mt-1" />
+                    <p>We also help address editorial comments, peer reviewer suggestions, and improve the manuscript accordingly—all included in your package.</p>
+                  </div>
+                </div>
+                <p className="font-semibold text-primary-600 dark:text-secondary-400 text-center">
+                  There are no hidden costs. No extra fees. Just complete support.
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-20 bg-white dark:bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-              Our Publication Process
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              💡 Why Choose MedZen Writes?
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              A systematic approach to ensure your research gets published in the right journal
-            </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {process.map((step, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {whyChooseUs.map((feature, index) => (
               <motion.div
-                key={step.step}
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center"
+                className="bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-gray-800 dark:to-gray-700 p-6 rounded-xl border border-gray-200 dark:border-gray-600"
               >
-                <div className="flex items-center justify-center w-16 h-16 bg-primary-600 dark:bg-secondary-600 text-white rounded-full mx-auto mb-6">
-                  <span className="text-xl font-bold">{step.step}</span>
+                <div className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-primary-600 rounded-full mt-3 flex-shrink-0" />
+                  <p className="text-gray-700 dark:text-gray-300 font-medium">{feature}</p>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
-                  {step.title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  {step.description}
-                </p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 bg-white dark:bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                Why Choose Our Publication Services?
-              </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-                Our expert team has helped hundreds of researchers successfully publish their work in top-tier journals.
-              </p>
-              
-              <div className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="flex items-center"
-                  >
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-                    <span className="text-gray-700 dark:text-gray-300">{benefit}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-gray-800 dark:to-gray-700 p-8 rounded-xl"
-            >
-              <div className="grid grid-cols-2 gap-6 text-center">
-                <div>
-                  <div className="flex items-center justify-center w-12 h-12 bg-primary-100 dark:bg-secondary-900/20 rounded-lg mx-auto mb-4">
-                    <Award className="h-6 w-6 text-primary-600 dark:text-secondary-400" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">95%</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">Success Rate</p>
-                </div>
-                <div>
-                  <div className="flex items-center justify-center w-12 h-12 bg-primary-100 dark:bg-secondary-900/20 rounded-lg mx-auto mb-4">
-                    <Clock className="h-6 w-6 text-primary-600 dark:text-secondary-400" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">2-4</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">Weeks Average</p>
-                </div>
-                <div>
-                  <div className="flex items-center justify-center w-12 h-12 bg-primary-100 dark:bg-secondary-900/20 rounded-lg mx-auto mb-4">
-                    <Users className="h-6 w-6 text-primary-600 dark:text-secondary-400" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">500+</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">Published Papers</p>
-                </div>
-                <div>
-                  <div className="flex items-center justify-center w-12 h-12 bg-primary-100 dark:bg-secondary-900/20 rounded-lg mx-auto mb-4">
-                    <BookOpen className="h-6 w-6 text-primary-600 dark:text-secondary-400" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">100+</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">Partner Journals</p>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="py-20 bg-primary-600 dark:bg-secondary-800">
+      <section className="py-20 bg-gradient-to-r from-primary-600 to-secondary-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -266,20 +185,20 @@ const JournalPublication = () => {
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Publish Your Research?
             </h2>
-            <p className="text-xl text-primary-100 dark:text-secondary-100 mb-8 max-w-3xl mx-auto">
-              Let our experts help you prepare and submit your manuscript for maximum publication success.
+            <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+              Let us help you transform your thesis into a published manuscript.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-white text-primary-600 dark:bg-gray-900 dark:text-secondary-400 font-semibold rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
+                className="bg-white text-primary-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center space-x-2"
               >
-                Get Started Today
-                <ArrowRight className="h-5 w-5 ml-2" />
+                <span>Get Started</span>
+                <ArrowRight className="h-5 w-5" />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-primary-600 dark:hover:bg-gray-900 dark:hover:text-secondary-400 transition-colors duration-200"
+                className="border-2 border-white text-white hover:bg-white hover:text-primary-600 px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
               >
                 View All Services
               </Link>
