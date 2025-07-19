@@ -30,7 +30,7 @@ const About = () => {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 pt-20">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-emerald-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">
+      <section className="py-12 bg-gradient-to-br from-emerald-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -42,7 +42,7 @@ const About = () => {
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
               About MedZen Writes
             </h1>
-            <h2 className="text-2xl md:text-3xl font-semibold text-emerald-600 dark:text-emerald-400 mb-8">
+            <h2 className="text-2xl md:text-3xl font-semibold text-primary-600 dark:text-secondary-400 mb-8">
               Because Your Research Deserves to Be Heard — Not Held Back
             </h2>
           </motion.div>
@@ -143,8 +143,8 @@ const About = () => {
                 viewport={{ once: true }}
                 className="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg text-center border border-gray-200 dark:border-gray-600"
               >
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-emerald-100 to-blue-100 dark:from-emerald-900/20 dark:to-blue-900/20 rounded-xl mb-6 mx-auto">
-                  <stat.icon className="h-8 w-8 text-emerald-600 dark:text-emerald-400" />
+                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary-100 to-secondary-100 dark:from-primary-900/20 dark:to-secondary-900/20 rounded-xl mb-6 mx-auto">
+                  <stat.icon className="h-8 w-8 text-primary-600 dark:text-secondary-400" />
                 </div>
                 <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
                   {stat.number}
@@ -187,7 +187,7 @@ const About = () => {
                     viewport={{ once: true }}
                     className="flex items-start space-x-3"
                   >
-                    <div className="w-2 h-2 bg-emerald-600 rounded-full mt-3 flex-shrink-0" />
+                    <div className="w-2 h-2 bg-primary-600 rounded-full mt-3 flex-shrink-0" />
                     <span className="text-lg text-gray-600 dark:text-gray-300">{item}</span>
                   </motion.li>
                 ))}
@@ -227,7 +227,7 @@ const About = () => {
               <p>
                 Many were expected to produce flawless theses, manuscripts, and case reports on tight deadlines — without the time, writing expertise, or support needed to succeed. As a result, important research remained unpublished, and opportunities like fellowships, global applications, and academic advancement slipped away.
               </p>
-              <p className="text-xl font-semibold text-gray-900 dark:text-white text-center">
+              <p className="text-xl font-semibold text-primary-600 dark:text-secondary-400 text-center">
                 We started MedZen Writes to change that.
               </p>
             </div>

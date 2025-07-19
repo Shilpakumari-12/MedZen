@@ -10,6 +10,11 @@ import Services from './pages/Services';
 import TestimonialsPage from './pages/TestimonialsPage';
 import FAQ from './pages/FAQ';
 import Contact from './pages/Contact';
+import JournalPublication from './pages/services/JournalPublication';
+import CaseReport from './pages/services/CaseReport';
+import ReviewArticle from './pages/services/ReviewArticle';
+import Thesis from './pages/services/Thesis';
+import Protocol from './pages/services/Protocol';
 
 function App() {
   return (
@@ -25,6 +30,11 @@ function App() {
               <Route path="/testimonials" element={<TestimonialsPage />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/services/journal-publication" element={<JournalPublication />} />
+              <Route path="/services/case-report" element={<CaseReport />} />
+              <Route path="/services/review-article" element={<ReviewArticle />} />
+              <Route path="/services/thesis" element={<Thesis />} />
+              <Route path="/services/protocol" element={<Protocol />} />
             </Routes>
           </main>
           <Footer />

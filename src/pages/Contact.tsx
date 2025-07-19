@@ -16,19 +16,19 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      content: 'info@medzen.com',
-      href: 'mailto:info@medzen.com'
+      content: 'info@medzeninnovations.in',
+      href: 'mailto:info@medzeninnovations.in'
     },
     {
       icon: Phone,
       title: 'Phone',
-      content: '+1 (555) 987-6543',
-      href: 'tel:+15559876543'
+      content: '+91 91763 65161',
+      href: 'tel:+91 91763 65161'
     },
     {
       icon: MapPin,
       title: 'Address',
-      content: '456 Medical Plaza, Healthcare City, HC 54321',
+      content: 'Old no. 56/ New no. 125 Venkatachalam Street, Royapettah',
       href: '#'
     }
   ];
@@ -86,7 +86,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 pt-20">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-emerald-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">
+      <section className="py-12 bg-gradient-to-br from-emerald-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -136,7 +136,7 @@ const Contact = () => {
                     className="flex items-start space-x-4"
                   >
                     <div className="flex items-center justify-center w-12 h-12 bg-emerald-100 dark:bg-emerald-900/20 rounded-lg flex-shrink-0">
-                      <info.icon className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
+                      <info.icon className="h-6 w-6 text-primary-600 dark:text-secondary-400" />
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">
@@ -144,7 +144,7 @@ const Contact = () => {
                       </h3>
                       <a
                         href={info.href}
-                        className="text-gray-600 dark:text-gray-300 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors duration-200"
+                        className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-secondary-400 transition-colors duration-200"
                       >
                         {info.content}
                       </a>
@@ -211,7 +211,7 @@ const Contact = () => {
                       className={`w-full px-4 py-3 rounded-lg border ${
                         errors.name
                           ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
-                          : 'border-gray-300 dark:border-gray-600 focus:border-emerald-500 focus:ring-emerald-500'
+                          : 'border-gray-300 dark:border-gray-600 focus:border-primary-500 focus:ring-primary-500'
                       } bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-opacity-50 transition-colors duration-200`}
                       placeholder="Your full name"
                     />
@@ -233,7 +233,7 @@ const Contact = () => {
                       className={`w-full px-4 py-3 rounded-lg border ${
                         errors.email
                           ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
-                          : 'border-gray-300 dark:border-gray-600 focus:border-emerald-500 focus:ring-emerald-500'
+                          : 'border-gray-300 dark:border-gray-600 focus:border-primary-500 focus:ring-primary-500'
                       } bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-opacity-50 transition-colors duration-200`}
                       placeholder="your.email@example.com"
                     />
@@ -255,7 +255,7 @@ const Contact = () => {
                       className={`w-full px-4 py-3 rounded-lg border ${
                         errors.subject
                           ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
-                          : 'border-gray-300 dark:border-gray-600 focus:border-emerald-500 focus:ring-emerald-500'
+                          : 'border-gray-300 dark:border-gray-600 focus:border-primary-500 focus:ring-primary-500'
                       } bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-opacity-50 transition-colors duration-200`}
                       placeholder="What's this about?"
                     />
@@ -277,7 +277,7 @@ const Contact = () => {
                       className={`w-full px-4 py-3 rounded-lg border ${
                         errors.message
                           ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
-                          : 'border-gray-300 dark:border-gray-600 focus:border-emerald-500 focus:ring-emerald-500'
+                          : 'border-gray-300 dark:border-gray-600 focus:border-primary-500 focus:ring-primary-500'
                       } bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-opacity-50 transition-colors duration-200 resize-none`}
                       placeholder="Tell us more about your inquiry..."
                     />
@@ -288,7 +288,7 @@ const Contact = () => {
 
                   <button
                     type="submit"
-                    className="w-full bg-emerald-600 hover:bg-emerald-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center space-x-2"
+                    className="w-full bg-primary-600 hover:bg-primary-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center space-x-2"
                   >
                     <Send className="h-5 w-5" />
                     <span>Send Message</span>

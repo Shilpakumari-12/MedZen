@@ -47,10 +47,11 @@ const Newsletter = () => {
           <div className="flex items-center justify-center mb-6">
             <motion.div
               className="p-3 bg-emerald-100 dark:bg-emerald-900/20 rounded-full"
+              className="p-3 bg-primary-100 dark:bg-secondary-900/20 rounded-full"
               whileHover={{ rotate: 360 }}
               transition={{ duration: 0.5 }}
             >
-              <Mail className="h-8 w-8 text-emerald-600 dark:text-emerald-400" />
+              <Mail className="h-8 w-8 text-primary-600 dark:text-secondary-400" />
             </motion.div>
           </div>
           
@@ -94,7 +95,7 @@ const Newsletter = () => {
                     className={`w-full px-4 py-3 rounded-lg border ${
                       error
                         ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
-                        : 'border-gray-300 dark:border-gray-600 focus:border-emerald-500 focus:ring-emerald-500'
+                        : 'border-gray-300 dark:border-gray-600 focus:border-primary-500 focus:ring-primary-500'
                     } bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-opacity-50 transition-colors duration-200`}
                   />
                   {error && (
@@ -103,7 +104,7 @@ const Newsletter = () => {
                 </div>
                 <motion.button
                   type="submit"
-                  className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center space-x-2 whitespace-nowrap"
+                  className="bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center space-x-2 whitespace-nowrap"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >

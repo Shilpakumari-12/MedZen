@@ -7,7 +7,7 @@ const Footer = () => {
     { icon: Linkedin, href: 'https://www.linkedin.com/company/medzen-writes/?viewAsMember=true', label: 'LinkedIn' },
     { icon: Instagram, href: 'https://www.instagram.com/medzenwrites?igsh=MXY5c2ZkMGJwMTR4Yg==', label: 'Instagram' },
     { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Mail, href: 'mailto:info@medzen.com', label: 'Email' }
+    { icon: Mail, href: 'info@medzeninnovations.in', label: 'Email' }
   ];
 
   const siteLinks = [
@@ -26,7 +26,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-2 space-y-3">
             <div className="flex items-center space-x-2">
-              <Heart className="h-8 w-8 text-emerald-600" />
+              <Heart className="h-8 w-8 text-primary-600" />
               <span className="text-xl font-bold text-gray-900 dark:text-white">
                 MedZen
               </span>
@@ -36,9 +36,9 @@ const Footer = () => {
             </p>
             <div className="text-gray-600 dark:text-gray-400 text-sm">
               <p className="font-medium text-gray-900 dark:text-white mb-1">Address:</p>
-              <p>456 Medical Plaza, Healthcare City, HC 54321</p>
-              <p>Phone: +1 (555) 987-6543</p>
-              <p>Email: info@medzen.com</p>
+              <p>Old no. 56/ New no. 125 Venkatachalam Street, Royapettah, Chennai-14</p>
+              <p>Phone: +91 91763 65161</p>
+              <p>Email: info@medzeninnovations.in</p>
             </div>
           </div>
 
@@ -71,7 +71,7 @@ const Footer = () => {
                 <a
                   key={social.label}
                   href={social.href}
-                  className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-emerald-100 dark:hover:bg-emerald-900/20 text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors duration-200"
+                  className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-primary-100 dark:hover:bg-secondary-900/20 text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-secondary-400 transition-colors duration-200"
                   aria-label={social.label}
                 >
                   <social.icon className="h-4 w-4" />

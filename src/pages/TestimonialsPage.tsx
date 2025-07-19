@@ -138,7 +138,7 @@ const TestimonialsPage = () => {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 pt-20">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-emerald-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">
+      <section className="py-12 bg-gradient-to-br from-emerald-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -161,10 +161,10 @@ const TestimonialsPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             {[
-              { icon: Users, number: '10,000+', label: 'Satisfied Patients' },
-              { icon: Award, number: '500+', label: 'Medical Professionals' },
+              { icon: Users, number: '50+', label: 'Theses Completed' },
+              { icon: Award, number: '20+', label: 'Review Articles Published' },
               { icon: Heart, number: '98%', label: 'Satisfaction Rate' },
-              { icon: Star, number: '4.9/5', label: 'Average Rating' }
+              { icon: Star, number: '10+', label: 'Research Articles Authored' }
             ].map((stat, index) => (
               <motion.div
                 key={index}
@@ -208,8 +208,8 @@ const TestimonialsPage = () => {
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-6 py-3 rounded-lg font-medium transition-colors duration-200 ${
                     selectedCategory === category.id
-                      ? 'bg-emerald-600 text-white'
-                      : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-emerald-100 dark:hover:bg-emerald-900/20'
+                      ? 'bg-primary-600 text-white'
+                      : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-primary-100 dark:hover:bg-secondary-900/20'
                   }`}
                 >
                   {category.name}
@@ -228,12 +228,12 @@ const TestimonialsPage = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className={`bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 relative ${
-                    testimonial.featured ? 'ring-2 ring-emerald-500' : ''
+                  className={`bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 relative ${
+                    testimonial.featured ? 'ring-2 ring-primary-500' : ''
                   }`}
                 >
                   {testimonial.featured && (
-                    <div className="absolute -top-3 left-6 bg-emerald-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    <div className="absolute -top-3 left-6 bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                       Featured
                     </div>
                   )}
@@ -248,7 +248,7 @@ const TestimonialsPage = () => {
                       <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                         {testimonial.name}
                       </h3>
-                      <p className="text-emerald-600 dark:text-emerald-400 text-sm">
+                      <p className="text-primary-600 dark:text-secondary-400 text-sm">
                         {testimonial.role}
                       </p>
                       <p className="text-gray-600 dark:text-gray-400 text-sm">
@@ -262,7 +262,7 @@ const TestimonialsPage = () => {
                   </div>
 
                   <blockquote className="text-gray-700 dark:text-gray-300 mb-6 relative">
-                    <Quote className="h-6 w-6 text-emerald-600 dark:text-emerald-400 absolute -top-2 -left-2" />
+                    <Quote className="h-6 w-6 text-primary-600 dark:text-secondary-400 absolute -top-2 -left-2" />
                     <p className="pl-4 italic">"{testimonial.content}"</p>
                   </blockquote>
 
@@ -321,10 +321,10 @@ const TestimonialsPage = () => {
               Become part of the healthcare revolution. Experience the difference MedZen can make for your patients and practice.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200">
+              <button className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200">
                 Share Your Story
               </button>
-              <button className="border-2 border-emerald-600 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200">
+              <button className="border-2 border-primary-600 text-primary-600 dark:text-secondary-400 hover:bg-primary-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200">
                 Get Started Today
               </button>
             </div>
@@ -333,7 +333,7 @@ const TestimonialsPage = () => {
       </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-emerald-600 to-blue-600">
+      <section className="py-20 bg-gradient-to-r from-primary-600 to-secondary-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -344,14 +344,14 @@ const TestimonialsPage = () => {
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Healthcare?
             </h2>
-            <p className="text-xl text-emerald-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
               Join thousands of healthcare professionals who trust MedZen for innovative medical solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-emerald-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors duration-200">
+              <button className="bg-white text-primary-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors duration-200">
                 Contact Us
               </button>
-              <button className="border-2 border-white text-white hover:bg-white hover:text-emerald-600 px-8 py-3 rounded-lg font-semibold transition-colors duration-200">
+              <button className="border-2 border-white text-white hover:bg-white hover:text-primary-600 px-8 py-3 rounded-lg font-semibold transition-colors duration-200">
                 Learn More
               </button>
             </div>

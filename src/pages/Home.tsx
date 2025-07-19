@@ -89,10 +89,10 @@ const Home = () => {
   ];
 
   const stats = [
-    { number: '50k+', label: 'Patients Served', icon: Users },
-    { number: '500+', label: 'Medical Professionals', icon: Stethoscope },
-    { number: '100+', label: 'Healthcare Partners', icon: Heart },
-    { number: '25+', label: 'Countries Reached', icon: Globe }
+    { number: '50+', label: 'Theses Completed', icon: Users },
+    { number: '20+', label: 'Review Articles Published', icon: Heart },
+    { number: '10+', label: 'Research Articles Authored', icon: Stethoscope },
+    { number: '10+', label: 'Case Reports Written', icon: Globe }
   ];
 
   const processSteps = [
@@ -131,7 +131,7 @@ const Home = () => {
               className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6"
             >
               Empowering Research{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-600">
                Elevating Careers
               </span>
             </motion.h1>
@@ -153,14 +153,14 @@ const Home = () => {
             >
               <Link
                 to="/about"
-                className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center space-x-2"
+                className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200 flex items-center space-x-2"
               >
                 <span>Learn More</span>
                 <ArrowRight className="h-5 w-5" />
               </Link>
               <Link
                 to="/services"
-                className="border-2 border-emerald-600 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
+                className="border-2 border-primary-600 text-primary-600 dark:text-secondary-400 hover:bg-primary-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
               >
                 Our Services
               </Link>
@@ -175,11 +175,11 @@ const Home = () => {
             >
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
-                <span>+1 (555) 987-6543</span>
+                <span>+91 91763 65161</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
-                <span>info@medzen.com</span>
+                <span>info@medzeninnovations.in</span>
               </div>
             </motion.div>
           </div>
@@ -227,8 +227,8 @@ const Home = () => {
                 viewport={{ once: true }}
                 className="bg-white dark:bg-gray-700 p-8 rounded-xl hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-600 group hover:-translate-y-2"
               >
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-emerald-100 to-blue-100 dark:from-emerald-900/20 dark:to-blue-900/20 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon className="h-8 w-8 text-emerald-600 dark:text-emerald-400" />
+                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary-100 to-secondary-100 dark:from-primary-900/20 dark:to-secondary-900/20 rounded-xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <feature.icon className="h-8 w-8 text-primary-600 dark:text-secondary-400" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
                   {feature.title}
@@ -268,10 +268,10 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-emerald-50 to-blue-50 dark:from-gray-800 dark:to-gray-700 p-8 rounded-xl border border-gray-200 dark:border-gray-600 hover:shadow-xl transition-all duration-300"
+                className="bg-gradient-to-br from-primary-50 to-secondary-50 dark:from-gray-800 dark:to-gray-700 p-8 rounded-xl border border-gray-200 dark:border-gray-600 hover:shadow-xl transition-all duration-300"
               >
                 <div className="flex items-center mb-6">
-                  <div className="flex items-center justify-center w-14 h-14 bg-emerald-600 rounded-xl mr-4">
+                  <div className="flex items-center justify-center w-14 h-14 bg-primary-600 rounded-xl mr-4">
                     <service.icon className="h-7 w-7 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
@@ -284,7 +284,7 @@ const Home = () => {
                 <div className="grid grid-cols-2 gap-3">
                   {service.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center space-x-2">
-                      <CheckCircle className="h-4 w-4 text-emerald-600 dark:text-emerald-400 flex-shrink-0" />
+                      <CheckCircle className="h-4 w-4 text-primary-600 dark:text-secondary-400 flex-shrink-0" />
                       <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>
                     </div>
                   ))}
@@ -323,7 +323,7 @@ const Home = () => {
                 viewport={{ once: true }}
                 className="text-center relative"
               >
-                <div className="bg-emerald-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6">
+                <div className="bg-primary-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-6">
                   {step.step}
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
@@ -334,7 +334,7 @@ const Home = () => {
                 </p>
                 {index < processSteps.length - 1 && (
                   <div className="hidden lg:block absolute top-8 -right-4 transform translate-x-1/2">
-                    <ArrowRight className="h-6 w-6 text-emerald-600" />
+                    <ArrowRight className="h-6 w-6 text-primary-600" />
                   </div>
                 )}
               </motion.div>
@@ -348,7 +348,7 @@ const Home = () => {
       <Testimonials />
 
       {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-r from-emerald-600 to-blue-600">
+      <section className="py-20 bg-gradient-to-r from-primary-600 to-secondary-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {stats.map((stat, index) => (
@@ -364,7 +364,7 @@ const Home = () => {
                 <div className="text-4xl md:text-5xl font-bold text-white mb-2">
                   {stat.number}
                 </div>
-                <div className="text-emerald-100 font-medium">
+                <div className="text-primary-100 font-medium">
                   {stat.label}
                 </div>
               </motion.div>
