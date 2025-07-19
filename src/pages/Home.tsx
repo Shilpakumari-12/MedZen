@@ -132,7 +132,7 @@ const Home = () => {
             >
               Empowering Research{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-secondary-600">
-               Elevating Careers.
+               Elevating Careers
               </span>
             </motion.h1>
             
