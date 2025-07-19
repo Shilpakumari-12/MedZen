@@ -1,3 +1,118 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+  
+  :root {
+    --color-primary-50: 240 249 255;
+    --color-primary-100: 224 242 254;
+    --color-primary-200: 186 230 253;
+    --color-primary-300: 125 211 252;
+    --color-primary-400: 56 189 248;
+    --color-primary-500: 20 80 104;
+    --color-primary-600: 15 61 82;
+    --color-primary-700: 12 47 62;
+    --color-primary-800: 8 33 41;
+    --color-primary-900: 4 20 25;
+    
+    --color-secondary-50: 240 253 244;
+    --color-secondary-100: 220 252 231;
+    --color-secondary-200: 187 247 208;
+    --color-secondary-300: 134 239 172;
+    --color-secondary-400: 74 222 128;
+    --color-secondary-500: 91 155 98;
+    --color-secondary-600: 74 124 80;
+    --color-secondary-700: 58 93 62;
+    --color-secondary-800: 42 62 44;
+    --color-secondary-900: 26 31 26;
+  }
+  
+  .dark {
+    --color-primary-50: 4 20 25;
+    --color-primary-100: 8 33 41;
+    --color-primary-200: 12 47 62;
+    --color-primary-300: 15 61 82;
+    --color-primary-400: 20 80 104;
+    --color-primary-500: 56 189 248;
+    --color-primary-600: 125 211 252;
+    --color-primary-700: 186 230 253;
+    --color-primary-800: 224 242 254;
+    --color-primary-900: 240 249 255;
+    
+    --color-secondary-50: 26 31 26;
+    --color-secondary-100: 42 62 44;
+    --color-secondary-200: 58 93 62;
+    --color-secondary-300: 74 124 80;
+    --color-secondary-400: 91 155 98;
+    --color-secondary-500: 74 222 128;
+    --color-secondary-600: 134 239 172;
+    --color-secondary-700: 187 247 208;
+    --color-secondary-800: 220 252 231;
+    --color-secondary-900: 240 253 244;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.lucide {
+  display: inline-block !important;
+  width: 1em;
+  height: 1em;
+  stroke-width: 2;
+  stroke: currentColor;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* WhatsApp Button Animations */
+@keyframes whatsapp-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.whatsapp-pulse {
+  animation: whatsapp-pulse 2s infinite;
+}
+
+/* Ensure consistent colors across environments */
+.bg-primary-50 { background-color: rgb(var(--color-primary-50)); }
+.bg-primary-100 { background-color: rgb(var(--color-primary-100)); }
+.bg-primary-600 { background-color: rgb(var(--color-primary-600)); }
+.bg-primary-700 { background-color: rgb(var(--color-primary-700)); }
+.text-primary-600 { color: rgb(var(--color-primary-600)); }
+.text-primary-700 { color: rgb(var(--color-primary-700)); }
+.border-primary-600 { border-color: rgb(var(--color-primary-600)); }
+
+.bg-secondary-50 { background-color: rgb(var(--color-secondary-50)); }
+.bg-secondary-100 { background-color: rgb(var(--color-secondary-100)); }
+.bg-secondary-600 { background-color: rgb(var(--color-secondary-600)); }
+.text-secondary-400 { color: rgb(var(--color-secondary-400)); }
+.text-secondary-600 { color: rgb(var(--color-secondary-600)); }
+.border-secondary-600 { border-color: rgb(var(--color-secondary-600)); }

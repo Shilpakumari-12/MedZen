@@ -46,7 +46,6 @@ const Newsletter = () => {
         >
           <div className="flex items-center justify-center mb-6">
             <motion.div
-              className="p-3 bg-emerald-100 dark:bg-emerald-900/20 rounded-full"
               className="p-3 bg-primary-100 dark:bg-secondary-900/20 rounded-full"
               whileHover={{ rotate: 360 }}
               transition={{ duration: 0.5 }}

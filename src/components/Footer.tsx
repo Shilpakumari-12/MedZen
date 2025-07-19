@@ -26,7 +26,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-2 space-y-3">
             <div className="flex items-center space-x-2">
-              <Heart className="h-8 w-8 text-primary-600" />
+              <Heart className="h-8 w-8 text-primary-600 dark:text-secondary-400" />
               <span className="text-xl font-bold text-gray-900 dark:text-white">
                 MedZen
               </span>
