@@ -32,59 +32,27 @@ const Home = () => {
   const services = [
     {
       icon: Stethoscope,
-      title: 'Advanced Diagnostics',
-      description: 'AI-powered diagnostic tools that provide accurate, rapid results for better patient outcomes.',
-      features: ['AI-Powered Analysis', 'Real-time Results', 'Multi-specialty Support', 'Cloud Integration']
+      title: 'Journal Publication',
+      description: 'Expert manuscript preparation and journal submission support for maximum publication success.',
+      features: ['Manuscript Writing', 'Journal Selection', 'Submission Support', 'Peer Review Response']
     },
     {
       icon: Brain,
-      title: 'Digital Health Platform',
-      description: 'Comprehensive digital health solutions connecting patients, providers, and medical data.',
-      features: ['Electronic Health Records', 'Telemedicine', 'Patient Portals', 'Data Analytics']
+      title: 'Thesis Writing',
+      description: 'Comprehensive thesis and dissertation writing support for graduate and doctoral students.',
+      features: ['Research Proposal', 'Literature Review', 'Methodology', 'Data Analysis']
     },
     {
       icon: Activity,
-      title: 'Remote Monitoring',
-      description: 'Continuous patient monitoring systems for chronic disease management and recovery.',
-      features: ['24/7 Monitoring', 'Alert Systems', 'Trend Analysis', 'Mobile Apps']
+      title: 'Case Reports',
+      description: 'Professional case report writing that meets journal standards and guidelines.',
+      features: ['Clinical Documentation', 'Literature Review', 'Discussion Analysis', 'Journal Formatting']
     },
     {
       icon: Globe,
-      title: 'Global Healthcare Access',
-      description: 'Expanding quality healthcare access to underserved communities worldwide.',
-      features: ['Telemedicine Networks', 'Mobile Clinics', 'Training Programs', 'Community Outreach']
-    }
-  ];
-
-  const specialties = [
-    { name: 'Cardiology', patients: '2,500+', satisfaction: '98%' },
-    { name: 'Pediatrics', patients: '1,800+', satisfaction: '97%' },
-    { name: 'Emergency Medicine', patients: '3,200+', satisfaction: '96%' },
-    { name: 'Oncology', patients: '1,200+', satisfaction: '99%' },
-    { name: 'Neurology', patients: '900+', satisfaction: '98%' },
-    { name: 'Orthopedics', patients: '1,500+', satisfaction: '97%' }
-  ];
-
-  const achievements = [
-    {
-      icon: Award,
-      title: 'Healthcare Innovation Award 2024',
-      description: 'Recognized for breakthrough AI diagnostic technology'
-    },
-    {
-      icon: Star,
-      title: 'Top 10 Healthcare Tech Companies',
-      description: 'Featured in Medical Technology Magazine'
-    },
-    {
-      icon: Shield,
-      title: 'HIPAA Compliance Certification',
-      description: 'Highest standards of patient data security'
-    },
-    {
-      icon: Globe,
-      title: 'International Expansion',
-      description: 'Now serving patients in 25+ countries'
+      title: 'Review Articles',
+      description: 'Systematic and narrative review articles with comprehensive literature analysis.',
+      features: ['Systematic Reviews', 'Meta-analysis', 'Narrative Reviews', 'PRISMA Guidelines']
     }
   ];
 
@@ -253,10 +221,10 @@ const Home = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Our Medical Solutions
+              Our Medical Writing Services
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Comprehensive healthcare technology solutions designed to improve patient outcomes and streamline medical operations.
+              Comprehensive medical writing solutions designed to advance your research and academic career.
             </p>
           </motion.div>
 
@@ -309,7 +277,7 @@ const Home = () => {
               How We Work
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Our structured writing and publication process ensures transparency, quality, and client satisfaction at every stage of your academic journey..
+              Our structured writing and publication process ensures transparency, quality, and client satisfaction at every stage of your academic journey.
             </p>
           </motion.div>
 
@@ -343,7 +311,6 @@ const Home = () => {
         </div>
       </section>
 
-
       {/* Testimonials Section */}
       <Testimonials />
 
@@ -375,7 +342,6 @@ const Home = () => {
 
       {/* Newsletter Section */}
       <Newsletter />
-
     </div>
   );
 };
