@@ -9,23 +9,23 @@ const Home = () => {
   const features = [
     {
       icon: Heart,
-      title: 'Patient-Centered Care',
-      description: 'Advanced medical solutions designed with patient comfort and outcomes as our top priority.'
+      title: 'Built for Medical Professionals Backed by Experts',
+      description: "Whether you're a postgraduate student, fellow, senior clinician, or life sciences researcher we tailor our support to your level and specialty."
     },
     {
       icon: Shield,
-      title: 'Medical Excellence',
-      description: 'Cutting-edge technology and proven methodologies ensuring the highest standards of healthcare.'
+      title: 'Custom Academic Writing No Templates',
+      description: 'Your content is crafted from scratch to meet journal standards, university formats, and discipline-specific requirements.'
     },
     {
       icon: Zap,
-      title: 'Innovation',
-      description: 'Revolutionary medical technologies that transform healthcare delivery and patient experiences.'
+      title: 'Ethical & Plagiarism Controlled',
+      description: 'All deliverables are <10% plagiarism, verified by certificate, and 100% human-written no AI, no shortcuts.'
     },
     {
       icon: Award,
-      title: 'Trusted Expertise',
-      description: 'Backed by leading medical professionals and trusted by healthcare institutions worldwide.'
+      title: 'Clinically Accurate Scientifically Sound',
+      description: 'We present your findings with logical structure, academic rigor, and journal-friendly formatting.'
     }
   ];
 
@@ -99,22 +99,22 @@ const Home = () => {
     {
       step: '01',
       title: 'Initial Consultation',
-      description: 'Connect with our medical experts to assess your healthcare needs and requirements.'
+      description: 'Speak with our academic coordinators to understand your research goals, timelines, and specific writing or publication needs.'
     },
     {
       step: '02',
-      title: 'Customized Solution',
-      description: 'We design a tailored medical solution that fits your specific healthcare challenges.'
+      title: 'Tailored Writing Plan',
+      description: 'We assign expert medical writers to craft a customized thesis, dissertation, or manuscript plan aligned with your research and institutional guidelines.'
     },
     {
       step: '03',
-      title: 'Implementation',
-      description: 'Our team ensures smooth integration with comprehensive training and support.'
+      title: 'Draft Submission & Feedback',
+      description: 'Chapters or sections are delivered progressively, allowing you to review, request changes, and stay involved throughout the writing process.'
     },
     {
       step: '04',
-      title: 'Ongoing Support',
-      description: 'Continuous monitoring, updates, and 24/7 support to ensure optimal performance.'
+      title: 'Final Delivery & Post-Support',
+      description: 'Receive your final polished document along with journal-ready formatting, plagiarism reports, and unlimited post-delivery revisions as per feedback.'
     }
   ];
 
@@ -130,9 +130,9 @@ const Home = () => {
               transition={{ duration: 0.8 }}
               className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6"
             >
-              Transforming{' '}
+              Empowering Research{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-blue-600">
-                Healthcare
+               Elevating Careers
               </span>
             </motion.h1>
             
@@ -142,7 +142,7 @@ const Home = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto"
             >
-              Advanced medical solutions for a healthier tomorrow. Empowering healthcare professionals with innovative technology and compassionate care.
+              Your partner in medical progress. We simplify thesis writing, research publishing, and statistical analysis so you can focus on saving lives.
             </motion.p>
             
             <motion.div
@@ -159,10 +159,10 @@ const Home = () => {
                 <ArrowRight className="h-5 w-5" />
               </Link>
               <Link
-                to="/initiatives"
+                to="/services"
                 className="border-2 border-emerald-600 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200"
               >
-                Our Initiatives
+                Our Services
               </Link>
             </motion.div>
 
@@ -180,10 +180,6 @@ const Home = () => {
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
                 <span>info@medzen.com</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Clock className="h-4 w-4" />
-                <span>24/7 Emergency Support</span>
               </div>
             </motion.div>
           </div>
@@ -217,11 +213,8 @@ const Home = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Why Choose MedZen?
+              Built for Clinicians Backed by Experts
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              We're committed to revolutionizing healthcare through cutting-edge technology, compassionate care, and medical excellence.
-            </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -316,7 +309,7 @@ const Home = () => {
               How We Work
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Our proven process ensures seamless integration and optimal results for your healthcare organization.
+              Our structured writing and publication process ensures transparency, quality, and client satisfaction at every stage of your academic journey..
             </p>
           </motion.div>
 
@@ -350,97 +343,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Medical Specialties */}
-      <section className="py-20 bg-white dark:bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Medical Specialties We Serve
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Our solutions are trusted across multiple medical specialties with proven results and high satisfaction rates.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {specialties.map((specialty, index) => (
-              <motion.div
-                key={specialty.name}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-emerald-50 to-blue-50 dark:from-gray-800 dark:to-gray-700 p-6 rounded-xl border border-gray-200 dark:border-gray-600"
-              >
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
-                  {specialty.name}
-                </h3>
-                <div className="flex justify-between items-center">
-                  <div>
-                    <p className="text-2xl font-bold text-emerald-600 dark:text-emerald-400">
-                      {specialty.patients}
-                    </p>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">Patients Served</p>
-                  </div>
-                  <div>
-                    <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-                      {specialty.satisfaction}
-                    </p>
-                    <p className="text-sm text-gray-600 dark:text-gray-300">Satisfaction Rate</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Achievements Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Recognition & Achievements
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Our commitment to excellence has been recognized by leading healthcare organizations and industry experts.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {achievements.map((achievement, index) => (
-              <motion.div
-                key={achievement.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white dark:bg-gray-700 p-6 rounded-xl text-center border border-gray-200 dark:border-gray-600 hover:shadow-lg transition-shadow duration-300"
-              >
-                <achievement.icon className="h-12 w-12 text-emerald-600 dark:text-emerald-400 mx-auto mb-4" />
-                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
-                  {achievement.title}
-                </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-300">
-                  {achievement.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Testimonials Section */}
       <Testimonials />
@@ -474,39 +376,6 @@ const Home = () => {
       {/* Newsletter Section */}
       <Newsletter />
 
-      {/* CTA Section */}
-      <section className="py-20 bg-white dark:bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-              Ready to Transform Healthcare?
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of healthcare professionals who trust MedZen for innovative medical solutions and exceptional patient care.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200 inline-flex items-center justify-center space-x-2"
-              >
-                <span>Get Started</span>
-                <ArrowRight className="h-5 w-5" />
-              </Link>
-              <Link
-                to="/success-stories"
-                className="border-2 border-emerald-600 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-600 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-200"
-              >
-                View Success Stories
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
     </div>
   );
 };

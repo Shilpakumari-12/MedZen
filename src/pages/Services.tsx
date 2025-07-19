@@ -2,8 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Heart, Users, Shield, Globe, Zap, ArrowRight, Stethoscope, Brain } from 'lucide-react';
 
-const Initiatives = () => {
-  const initiatives = [
+const Services = () => {
+  const services = [
     {
       icon: Heart,
       title: 'Patient Care Excellence',
@@ -91,7 +91,7 @@ const Initiatives = () => {
             className="text-center"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              Our Initiatives
+              Our Services
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               Discover our comprehensive medical programs and innovative healthcare solutions that are transforming patient care worldwide.
@@ -100,13 +100,13 @@ const Initiatives = () => {
         </div>
       </section>
 
-      {/* Initiatives Grid */}
+      {/* Services Grid */}
       <section className="py-20 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
-            {initiatives.map((initiative, index) => (
+            {services.map((service, index) => (
               <motion.div
-                key={initiative.title}
+                key={service.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -117,21 +117,21 @@ const Initiatives = () => {
                   {/* Header */}
                   <div className="mb-6">
                     <div className="flex items-center justify-between mb-4">
-                      <div className={`p-3 rounded-xl ${getColorClasses(initiative.color)} group-hover:scale-110 transition-transform duration-300`}>
-                        <initiative.icon className="h-7 w-7" />
+                      <div className={`p-3 rounded-xl ${getColorClasses(service.color)} group-hover:scale-110 transition-transform duration-300`}>
+                        <service.icon className="h-7 w-7" />
                       </div>
-                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(initiative.status)}`}>
-                        {initiative.status}
+                      <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(service.status)}`}>
+                        {service.status}
                       </span>
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                      {initiative.title}
+                      {service.title}
                     </h3>
                   </div>
 
                   {/* Description */}
                   <p className="text-gray-600 dark:text-gray-300 mb-6 text-sm leading-relaxed">
-                    {initiative.description}
+                    {service.description}
                   </p>
 
                   {/* Features */}
@@ -140,7 +140,7 @@ const Initiatives = () => {
                       Key Features:
                     </h4>
                     <ul className="space-y-1.5">
-                      {initiative.features.map((feature, featureIndex) => (
+                      {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center space-x-2">
                           <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full flex-shrink-0" />
                           <span className="text-xs text-gray-600 dark:text-gray-300">
@@ -193,4 +193,4 @@ const Initiatives = () => {
   );
 };
 
-export default Initiatives;
+export default Services;

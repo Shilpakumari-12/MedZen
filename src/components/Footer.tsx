@@ -1,19 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Twitter, Linkedin, Github, Mail, Heart } from 'lucide-react';
+import { Linkedin, Instagram, Facebook, Mail, Heart } from 'lucide-react';
 
 const Footer = () => {
   const socialLinks = [
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Github, href: '#', label: 'GitHub' },
-    { icon: Mail, href: '#', label: 'Email' }
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/medzen-writes/?viewAsMember=true', label: 'LinkedIn' },
+    { icon: Instagram, href: 'https://www.instagram.com/medzenwrites?igsh=MXY5c2ZkMGJwMTR4Yg==', label: 'Instagram' },
+    { icon: Facebook, href: '#', label: 'Facebook' },
+    { icon: Mail, href: 'mailto:info@medzen.com', label: 'Email' }
   ];
 
   const siteLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { name: 'Initiatives', path: '/initiatives' },
+    { name: 'Services', path: '/services' },
     { name: 'Success Stories', path: '/success-stories' },
     { name: 'Testimonials', path: '/testimonials' },
     { name: 'FAQ', path: '/faq' },
@@ -33,7 +33,7 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-gray-600 dark:text-gray-400 text-sm">
-              MedZen is a leading healthcare technology company dedicated to transforming medical care through innovative solutions. We provide advanced medical technologies, patient care systems, and digital health platforms that enhance healthcare delivery and improve patient outcomes.
+              Publishing isn’t just a milestone it’s a gateway to global recognition, academic growth, and career advancement.
             </p>
             <div className="text-gray-600 dark:text-gray-400 text-sm">
               <p className="font-medium text-gray-900 dark:text-white mb-1">Address:</p>
