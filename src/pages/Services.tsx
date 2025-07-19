@@ -6,7 +6,7 @@ const Services = () => {
   const services = [
     {
       icon: Heart,
-      title: 'Patient Care Excellence',
+      title: 'Journal Publication',
       description: 'Comprehensive patient care programs focused on improving health outcomes and patient satisfaction.',
       features: ['24/7 Patient Support', 'Personalized Treatment Plans', 'Remote Monitoring', 'Care Coordination'],
       status: 'Active',
@@ -14,7 +14,7 @@ const Services = () => {
     },
     {
       icon: Shield,
-      title: 'Medical Safety Standards',
+      title: 'Case Report',
       description: 'Advanced safety protocols and quality assurance measures to ensure the highest standards of medical care.',
       features: ['Safety Protocols', 'Quality Assurance', 'Risk Management', 'Compliance Monitoring'],
       status: 'Active',
@@ -22,7 +22,7 @@ const Services = () => {
     },
     {
       icon: Stethoscope,
-      title: 'Advanced Diagnostics',
+      title: 'Review Article',
       description: 'State-of-the-art diagnostic technologies and AI-powered analysis for accurate and rapid diagnosis.',
       features: ['AI Diagnostics', 'Imaging Technology', 'Lab Integration', 'Real-time Results'],
       status: 'Active',
@@ -30,7 +30,7 @@ const Services = () => {
     },
     {
       icon: Brain,
-      title: 'Digital Health Platform',
+      title: 'Thesis',
       description: 'Integrated digital health solutions connecting patients, providers, and medical data seamlessly.',
       features: ['Electronic Health Records', 'Telemedicine', 'Health Analytics', 'Mobile Apps'],
       status: 'In Development',
@@ -38,7 +38,7 @@ const Services = () => {
     },
     {
       icon: Zap,
-      title: 'Medical Innovation Hub',
+      title: 'Protocol / Synopsis',
       description: 'Cutting-edge research and development of next-generation medical technologies and treatments.',
       features: ['R&D Programs', 'Clinical Trials', 'Technology Incubator', 'Innovation Partnerships'],
       status: 'Planned',

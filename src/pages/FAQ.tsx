@@ -7,40 +7,32 @@ const FAQ = () => {
 
   const faqs = [
     {
-      question: 'What is MedZen?',
-      answer: 'MedZen is a leading healthcare technology company dedicated to transforming medical care through innovative solutions. We provide advanced medical technologies, patient care systems, and digital health platforms that enhance healthcare delivery and improve patient outcomes across various medical specialties.'
+      question: 'Who can use your services?',
+      answer: 'Our services are designed for PG medical students (MD, MS, DNB), clinicians, researchers, and healthcare professionals from MBBS, BDS, Pharmacy, Nursing, and Life Sciences backgrounds.'
     },
     {
-      question: 'How can healthcare providers integrate MedZen solutions?',
-      answer: 'Healthcare providers can integrate MedZen solutions through our comprehensive onboarding process. We offer training programs, technical support, and customized implementation plans. Our team works closely with medical professionals to ensure seamless integration with existing systems and workflows.'
+      question: 'Is my research data kept confidential?',
+      answer: 'Yes, we follow strict data protection policies. Your documents and personal details are kept fully confidential and are never shared without your permission.'
     },
     {
-      question: 'What medical specialties does MedZen serve?',
-      answer: 'MedZen serves a wide range of medical specialties including cardiology, pediatrics, emergency medicine, radiology, oncology, and primary care. Our solutions are designed to be adaptable across different medical disciplines while maintaining specialty-specific features and compliance requirements.'
+      question: 'Do you provide plagiarism-free content?',
+      answer: 'Absolutely. All our documents are checked with industry-standard plagiarism tools and come with a plagiarism report upon request.'
     },
     {
-      question: 'What support and training do you provide?',
-      answer: 'We provide comprehensive support including initial training programs, ongoing technical support, regular system updates, and access to our knowledge base. Our support team is available 24/7 for critical issues, and we offer both remote and on-site training options for healthcare teams.'
+      question: 'Can I request changes after delivery?',
+      answer: 'Yes, we offer unlimited post-delivery revisions until your document meets institutional or journal requirements.'
     },
     {
-      question: 'How does MedZen ensure patient data security?',
-      answer: 'Patient data security is our top priority. We implement enterprise-grade encryption, comply with HIPAA and other healthcare regulations, conduct regular security audits, and maintain strict access controls. Our systems are designed with privacy-by-design principles and undergo continuous security monitoring.'
+      question: 'Do you support journal submissions?',
+      answer: 'Yes, we help format and submit your manuscript to reputed journals indexed in PubMed, Scopus, UGC-CARE, and more.'
     },
     {
-      question: 'Can MedZen solutions integrate with existing hospital systems?',
-      answer: 'Yes, our solutions are designed for seamless integration with existing Electronic Health Records (EHR), Hospital Information Systems (HIS), and other medical software. We support standard healthcare data formats and protocols, ensuring smooth data flow and minimal disruption to current workflows.'
+      question: 'Do you guarantee publication in Journals?',
+      answer: 'No. We don\'t provide a guaranteed publication in the journal, but we give strive hard to improve the quality of the manuscript and try upto 4 journals if the articles are rejected with the same cost.'
     },
     {
-      question: 'What are the costs associated with MedZen solutions?',
-      answer: 'Our pricing is tailored to each healthcare organization\'s specific needs and scale. We offer flexible pricing models including subscription-based, per-user, and enterprise licensing options. Contact our sales team for a customized quote based on your requirements and to learn about available financing options.'
-    },
-    {
-      question: 'How do you measure the impact of your solutions?',
-      answer: 'We measure impact through various metrics including patient outcome improvements, healthcare efficiency gains, cost reductions, user satisfaction scores, and clinical performance indicators. We provide detailed analytics and reporting tools to help healthcare organizations track and demonstrate the value of our solutions.'
-    },
-    {
-      question: 'How can I stay updated on MedZen developments?',
-      answer: 'You can stay updated by subscribing to our newsletter, following us on social media, joining our healthcare professional network, and visiting our website regularly. We also host webinars, medical conferences, and training sessions where you can learn about our latest innovations and connect with other healthcare professionals.'
+      question: 'What are your payment terms?',
+      answer: 'We offer flexible payment options based on the type of service you choose. Depending on the project, payment may be collected either in full upfront or in predefined stages (milestone-based). Each service—such as thesis writing, manuscript preparation, or statistical analysis—may follow a customized payment structure tailored to its scope and timeline.'
     }
   ];
 
@@ -134,7 +126,7 @@ const FAQ = () => {
               Still Have Questions?
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-              Our team is here to help. Reach out to us for more information about our initiatives, partnerships, or how to get involved.
+              Our team is here to help. Reach out to us for more information about our services, partnerships, or how to get involved.
             </p>
             <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200">
               Contact Us

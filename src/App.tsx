@@ -7,7 +7,6 @@ import WhatsAppButton from './components/WhatsAppButton';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
-import SuccessStories from './pages/SuccessStories';
 import TestimonialsPage from './pages/TestimonialsPage';
 import FAQ from './pages/FAQ';
 import Contact from './pages/Contact';
@@ -23,7 +22,6 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
-              <Route path="/success-stories" element={<SuccessStories />} />
               <Route path="/testimonials" element={<TestimonialsPage />} />
               <Route path="/faq" element={<FAQ />} />
               <Route path="/contact" element={<Contact />} />
